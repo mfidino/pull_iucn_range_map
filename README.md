@@ -61,4 +61,4 @@ mams <- sf::read_sf(mammal_path,
 plot(mams[mams$binomial == "Didelphis virginiana",])
 ```
 
-<div align="center">< src="https://github.com/mfidino/pull_iucn_range_map/blob/main/opossum_range.png" alt="A range map for Virginia opossum." /></div>
+<div align="center"><img src="https://github.com/mfidino/pull_iucn_range_map/blob/main/opossum_range.png" alt="A range map for Virginia opossum." /></div>
