@@ -60,5 +60,15 @@ mams <- sf::read_sf(mammal_path,
 # plot it out:
 plot(mams[mams$binomial == "Didelphis virginiana",])
 ```
-
+And here is the range for opossum!
 <div align="center"><img src="https://github.com/mfidino/pull_iucn_range_map/blob/main/opossum_range.png" alt="A range map for Virginia opossum." /></div>
+
+```
+# Finally, in this example, raccoon have multiple rows in the dataset. You can combine
+#  them like so if you'd like to:
+mams <- mams %>% 
+  dplyr::group_by(binomial) %>% 
+  dplyr::summarise(
+    geometry = sf::st_union(geometry)
+  )
+  ```
