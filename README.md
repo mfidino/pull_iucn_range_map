@@ -3,6 +3,7 @@
 ```
 ### load packages
 library(sf)
+library(dplyr)
 
 # I am using the IUCN Spatial data to determine the range of terrestrial
 #  mammals throughout north america. On 1/5/2021 these data could be
