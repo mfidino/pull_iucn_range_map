@@ -19,9 +19,11 @@ mammal_path <- "D:/TERRESTRIAL_MAMMALS"
 # The mammal data is too large for me to pull entirely onto my laptop.
 #  So we're going to need to write a SQL query to collect the specific
 #  species for our analysis. First step is to get one row of data
-#  from this table to determine column names for querying
+#  from this table to determine column names for querying.
+#  You have to call the table name (here it is TERRESTRIAL_MAMMALS) as
+#  the name of the folder the data lives in.
 one_row <- sf::read_sf(
-  "D:/TERRESTRIAL_MAMMALS",
+  mammal_path,
   query = "SELECT * FROM TERRESTRIAL_MAMMALS LIMIT 1"
 )
 
